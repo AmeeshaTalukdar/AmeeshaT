@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .container {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #4e0f91;
+        }
+
+        .link {
+            margin-top: 10px;
+        }
+
+        .link a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="formContainer">
+        <!-- Default View: Sign Up -->
+        <h2 id="formTitle">Sign Up</h2>
+        <form id="signupForm" action="login.html" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <label>
+                <input type="checkbox" name="terms" required>
+                I accept the <a href="#">Terms of Use</a>
+            </label>
+            <button type="submit">Sign Up</button>
+        </form>
+        <form id="loginForm" action="dashboard.html" method="POST" style="display: none;">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <label>
+                <input type="checkbox" name="show_password">
+                Show Password
+            </label>
+            <button type="submit">Sign In</button>
+            <div class="link">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+        <div class="link">
+            <a href="#" id="toggleForm">Already have an account? Login</a>
+        </div>
+    </div>
+
+    <script>
+        const formTitle = document.getElementById('formTitle');
+        const signupForm = document.getElementById('signupForm');
+        const loginForm = document.getElementById('loginForm');
+        const toggleForm = document.getElementById('toggleForm');
+
+        toggleForm.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (signupForm.style.display === 'none') {
+                // Show Sign Up Form
+                signupForm.style.display = 'block';
+                loginForm.style.display = 'none';
+                formTitle.textContent = 'Sign Up';
+                toggleForm.textContent = 'Already have an account? Login';
+            } else {
+                // Show Login Form
+                signupForm.style.display = 'none';
+                loginForm.style.display = 'block';
+                formTitle.textContent = 'Login';
+                toggleForm.textContent = "Don't have an account? Sign Up";
+            }
+        });
+    </script>
+</body>
+</html>

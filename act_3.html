@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Tables and Hyperlinks</title>
+<style>
+table {
+border-collapse: collapse;
+width: 70%;
+margin: 20px auto;
+text-align: center;
+font-family: Arial, sans-serif;
+}
+td {
+border: 1px solid black;
+padding: 15px;
+}
+.image-cell img {
+width: 50px;
+height: 50px;
+}
+.shaded {
+background-color: lightblue; /* Your
+favorite color */
+}
+.affirmation {
+font-size: 14px;
+font-weight: bold;
+color: green;
+}
+a {
+text-decoration: none;
+color: blue;
+}
+</style>
+</head>
+<body>
+<h2 style="text-align: center;">Activity 3: Tables
+and Hyperlinks</h2>
+<table>
+<!-- Row 1 -->
+<tr>
+<td rowspan="2" class="image-cell"><img
+src="image1.jpg" alt="Image 1"></td>
+<td rowspan="2" class="shaded">r1c3</td>
+<td rowspan="1" class="affirmation">You are
+amazing!</td>
+<td>r1c5</td>
+</tr>
+<!-- Row 2 -->
+<tr>
+<td rowspan="2" colspan="2">r2c3</td>
+</tr>
+<!-- Row 3 -->
+<tr>
+<td><a href="home.html">Home</a></td>
+<td rowspan="2" class="shaded">r3c4</td>
+<td rowspan="2">r3c6</td>
+</tr>
+<!-- Row 4 -->
+<tr>
+<td class="shaded">r4c1</td>
+<td class="shaded">r4c2</td>
+</tr>
+<!-- Row 5 -->
+<tr>
+<td class="shaded">r5c1</td>
+<td>r5c3</td>
+<td class="affirmation">Keep Going!</td>
+<td>r5c5</td>
+</tr>
+<!-- Row 6 -->
+<tr>
+<td colspan="2">r6c4</td>
+<td class="affirmation">You can do it!</td>
+<td>r6c5</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>ACTIVITY 5- FORM 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        fieldset {
+            border: 2px solid #6c63ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: #6c63ff;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea,
+        input[list] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus,
+        input[list]:focus {
+            outline: none;
+            border-color: #6c63ff;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+        }
+
+        button {
+            background: #6c63ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #483D8B;
+        }
+
+        .datalist-input {
+            margin-bottom: 20px;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ACTIVITY 5- FORM 2</h1>
+    
+    <form action="#" method="post">
+
+        <!-- Text Box -->
+        <label for="textbox">Enter Your Name:</label>
+        <input type="text" id="textbox" name="textbox" placeholder="Your Name" required>
+
+        <!-- Radio Buttons -->
+        <fieldset>
+            <legend>Choose Your Gender:</legend>
+            <label>
+                <input type="radio" name="gender" value="male" required> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other"> Other
+            </label>
+        </fieldset>
+
+        <!-- Check Boxes -->
+        <fieldset>
+            <legend>Select Your Hobbies:</legend>
+            <label>
+                <input type="checkbox" name="hobbies" value="Reading"> Reading
+            </label>
+            <label>
+                <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+            </label>
+            <label>
+                <input type="checkbox" name="hobbies" value="Gaming"> Gaming
+            </label>
+        </fieldset>
+
+        <!-- Selection Box of Size 3 -->
+        <label for="scrolled-selection">Choose Your Country:</label>
+        <select id="scrolled-selection" name="country" size="3">
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="india">India</option>
+            <option value="canada">Canada</option>
+        </select>
+
+        <!-- Option Box -->
+        <label for="option-box">Choose Your Favorite Color:</label>
+        <select id="option-box" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+
+        <!-- TextArea Box -->
+        <label for="textarea">Comments or Suggestions:</label>
+        <textarea id="textarea" name="comments" placeholder="Your thoughts here..."></textarea>
+
+        <!-- Datalist -->
+        <label for="datalist-input" class="datalist-input">Choose a Programming Language:</label>
+        <input list="languages" id="datalist-input" name="language" placeholder="Start typing...">
+        <datalist id="languages">
+            <option value="JavaScript">
+            <option value="Python">
+            <option value="Java">
+            <option value="C#">
+            <option value="HTML5">
+        </datalist>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+
+        <p class="note">* All fields are required for form submission.</p>
+
+    </form>
+
+</body>
+</html>
